@@ -1,0 +1,68 @@
+/* =========================================================
+   Clima Nimbus | style.css
+   Organização:
+   1. Tokens (cores, fontes, espaços)   
+   2. Reset                              
+   3. Base                               
+                             
+   ========================================================= */
+
+/* ---------- 1. TOKENS ---------- */
+:root {
+  /* Cores */
+  --azul-profundo: #12355b;
+  --azul-ceu: #2f78b8;
+  --azul-claro: #e8f2fb;
+  --amarelo-sol: #f5b83d;
+  --branco: #ffffff;
+  --texto: #1c2b3a;
+  --texto-suave: #4a5b6c;
+  --borda: #cfdceb;
+  --erro-fundo: #fdeaea;
+  --erro-texto: #8a1f1f;
+
+  /* Cores do cartão "agora" (os temas só trocam estas duas) */
+  --agora-de: #1d4f91;
+  --agora-ate: #2f78b8;
+
+  /* Tipografia fluida */
+  --fonte: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --texto-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --titulo-2: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
+  --temperatura: clamp(3.5rem, 2.5rem + 6vw, 6.5rem);
+
+  /* Espaços e formas */
+  --espaco-1: 0.5rem;
+  --espaco-2: 1rem;
+  --espaco-3: 1.5rem;
+  --espaco-4: clamp(2rem, 1.5rem + 3vw, 3.5rem);
+  --raio: 0.75rem;
+  --raio-grande: 1.25rem;
+  --sombra: 0 2px 12px rgb(18 53 91 / 0.1);
+}
+
+/* ---------- 2. RESET ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+img, svg { display: block; max-width: 100%; }
+ul { padding: 0; list-style: none; }
+button, input { font: inherit; }
+
+/* ---------- 3. BASE ---------- */
+html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+
+body {
+  font-family: var(--fonte);
+  font-size: var(--texto-base);
+  line-height: 1.6;
+  color: var(--texto);
+  background: var(--azul-claro);
+}
+
+a { color: var(--azul-ceu); }
+a:hover { color: var(--azul-profundo); }
+
+:focus-visible {
+  outline: 3px solid var(--amarelo-sol);
+  outline-offset: 2px;
+}
