@@ -1,11 +1,12 @@
 /* =========================================================
    Clima Nimbus | style.css
    Organização:
-   1. Tokens (cores, fontes, espaços)   
-   2. Reset                              
-   3. Base                               
-                             
+   1. Tokens (cores, fontes, espaços)    5. Componentes
+   2. Reset                              6. Temas por clima
+   3. Base                               7. Utilitários
+   4. Layout                             8. Responsivo e preferências
    ========================================================= */
+
 
 /* ---------- 1. TOKENS ---------- */
 :root {
