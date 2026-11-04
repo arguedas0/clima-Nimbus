@@ -113,7 +113,38 @@
       </template>
     </section>
 
+
+    <!-- ===== CHUVA PREVISTA =====-->
+
+    <section id="chuva" class="secao" aria-labelledby="titulo-chuva">
+      <h2 id="titulo-chuva" class="secao__titulo">Volume de chuva previsto</h2>
+      <ul id="lista-chuva" class="lista-chuva">
+        <li class="chuva-item" style="--mm: 20%"><span class="chuva-item__dia">Ter 03/11</span><span class="chuva-item__barra" aria-hidden="true"></span><span class="chuva-item__valor">5 mm</span></li>
+        <li class="chuva-item" style="--mm: 20%"><span class="chuva-item__dia">Qua 04/11</span><span class="chuva-item__barra" aria-hidden="true"></span><span class="chuva-item__valor">5 mm</span></li>
+        <li class="chuva-item" style="--mm: 100%"><span class="chuva-item__dia">Qui 05/11</span><span class="chuva-item__barra" aria-hidden="true"></span><span class="chuva-item__valor">25 mm</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== DÚVIDAS ===== -->
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre" class="secao__titulo">Perguntas frequentes</h2>
+      <details class="faq">
+        <summary>Qual a diferença entre tempo e clima?</summary>
+        <p>O tempo é o estado da atmosfera agora, e muda de hora em hora. O clima é o comportamento médio do tempo em uma região ao longo de meses e anos.</p>
+      </details>
+      <details class="faq">
+        <summary>De onde vêm os dados?</summary>
+        <p>Os dados vêm da API gratuita Open-Meteo, que reúne modelos meteorológicos de vários países.</p>
+      </details>
+    </section>
   </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Nimbus Clima, projeto de estudo em HTML, CSS e JavaScript.</p>
+      <p>Dados por <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </div>
+  </footer>
 
 </body>
 </html>
