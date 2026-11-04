@@ -65,7 +65,54 @@
         <div class="detalhe"><dt>Mín / Máx hoje</dt><dd id="min-max">16° / 31°</dd></div>
       </dl>
     </section>
-    
+
+    <!-- ===== PREVISÃO DOS PRÓXIMOS DIAS ===== -->
+    <section id="previsao" class="secao" aria-labelledby="titulo-previsao">
+      <h2 id="titulo-previsao" class="secao__titulo">Previsão dos próximos dias</h2>
+
+      <ul id="lista-previsao" class="lista-previsao">
+        <li class="card-dia">
+          <h3 class="card-dia__nome">Hoje</h3>
+          <span class="icone" aria-hidden="true">🌦️</span>
+          <p class="card-dia__temp"><strong>31°</strong> <span>16°</span></p>
+          <p class="card-dia__descricao">Pancadas de chuva à tarde</p>
+        </li>
+        <li class="card-dia">
+          <h3 class="card-dia__nome">Amanhã</h3>
+          <span class="icone" aria-hidden="true">⛈️</span>
+          <p class="card-dia__temp"><strong>32°</strong> <span>17°</span></p>
+          <p class="card-dia__descricao">Chuva com trovoadas</p>
+        </li>
+        <li class="card-dia">
+          <h3 class="card-dia__nome">Qui</h3>
+          <span class="icone" aria-hidden="true">⛅</span>
+          <p class="card-dia__temp"><strong>28°</strong> <span>19°</span></p>
+          <p class="card-dia__descricao">Sol e algumas nuvens</p>
+        </li>
+        <li class="card-dia">
+          <h3 class="card-dia__nome">Sex</h3>
+          <span class="icone" aria-hidden="true">☀️</span>
+          <p class="card-dia__temp"><strong>29°</strong> <span>18°</span></p>
+          <p class="card-dia__descricao">Céu limpo</p>
+        </li>
+        <li class="card-dia">
+          <h3 class="card-dia__nome">Sáb</h3>
+          <span class="icone" aria-hidden="true">☁️</span>
+          <p class="card-dia__temp"><strong>26°</strong> <span>17°</span></p>
+          <p class="card-dia__descricao">Nublado</p>
+        </li>
+      </ul>
+
+      <template id="tpl-card-dia">
+        <li class="card-dia">
+          <h3 class="card-dia__nome"></h3>
+          <span class="icone" aria-hidden="true"></span>
+          <p class="card-dia__temp"><strong></strong> <span></span></p>
+          <p class="card-dia__descricao"></p>
+        </li>
+      </template>
+    </section>
+
   </main>
 
 </body>
