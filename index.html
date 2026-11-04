@@ -41,7 +41,31 @@
   </header>
 
   <main id="conteudo" class="container">
+        
+    <p id="mensagem-carregando" class="mensagem" role="status" hidden>Buscando previsão...</p>
+    <p id="mensagem-erro" class="mensagem mensagem--erro" role="alert" hidden></p>
 
+    <section id="agora" class="agora" data-clima="ceu-limpo" aria-labelledby="nome-cidade">
+      <div class="agora__principal">
+        <p class="agora__rotulo">Tempo agora</p>
+        <h1 id="nome-cidade">São Paulo, SP</h1>
+        <p class="agora__atualizacao">Atualizado às <time id="hora-atualizacao" datetime="2026-11-03T14:00">14:00</time></p>
+
+        <p class="agora__temperatura">
+          <span id="icone-clima" class="icone" aria-hidden="true">⛅</span>
+          <span id="temperatura">24°C</span>
+        </p>
+        <p id="descricao-clima" class="agora__descricao">Sol entre nuvens</p>
+      </div>
+
+      <dl class="detalhes">
+        <div class="detalhe"><dt>Sensação</dt><dd id="sensacao">26°C</dd></div>
+        <div class="detalhe"><dt>Umidade</dt><dd id="umidade">60%</dd></div>
+        <div class="detalhe"><dt>Vento</dt><dd id="vento">12 km/h</dd></div>
+        <div class="detalhe"><dt>Mín / Máx hoje</dt><dd id="min-max">16° / 31°</dd></div>
+      </dl>
+    </section>
+    
   </main>
 
 </body>
