@@ -66,3 +66,52 @@ a:hover { color: var(--azul-profundo); }
   outline: 3px solid var(--amarelo-sol);
   outline-offset: 2px;
 }
+
+/* ---------- 4. LAYOUT ---------- */
+.container { width: min(100% - 2rem, 70rem); margin-inline: auto; }
+
+main { padding-block: var(--espaco-3) var(--espaco-4); display: grid; gap: var(--espaco-4); }
+
+.secao__titulo { font-size: var(--titulo-2); line-height: 1.2; color: var(--azul-profundo); margin-bottom: var(--espaco-2); }
+
+/* ---------- 5. COMPONENTES ---------- */
+
+/* Link de acessibilidade */
+.pular-conteudo {
+  position: absolute; left: 1rem; top: -4rem;
+  background: var(--amarelo-sol); color: var(--azul-profundo);
+  padding: 0.5rem 1rem; border-radius: var(--raio); z-index: 10;
+}
+.pular-conteudo:focus { top: 1rem; }
+
+/* Topo */
+.topo { background: var(--azul-profundo); color: var(--branco); position: sticky; top: 0; z-index: 5; }
+.topo__conteudo { display: flex; flex-wrap: wrap; align-items: center; gap: var(--espaco-1) var(--espaco-3); padding-block: var(--espaco-2); }
+
+.marca { font-weight: 800; font-size: 1.25rem; color: var(--branco); text-decoration: none; }
+.marca:hover { color: var(--amarelo-sol); }
+
+.menu ul { display: flex; flex-wrap: wrap; gap: var(--espaco-1) var(--espaco-2); }
+.menu a { color: var(--branco); text-decoration: none; font-weight: 600; padding-block: 0.25rem; border-bottom: 2px solid transparent; }
+.menu a:hover { color: var(--branco); border-bottom-color: var(--amarelo-sol); }
+
+/* Busca */
+.busca { display: flex; flex-wrap: wrap; gap: var(--espaco-1); flex: 1 1 22rem; }
+.busca input {
+  flex: 1 1 12rem; min-width: 0;
+  padding: 0.6rem 1rem; border: 2px solid transparent; border-radius: var(--raio);
+  background: var(--branco); color: var(--texto);
+}
+
+/* Botões */
+.botao {
+  padding: 0.6rem 1.1rem; border: 0; border-radius: var(--raio);
+  background: var(--amarelo-sol); color: var(--azul-profundo);
+  font-weight: 800; cursor: pointer; transition: filter 0.2s;
+}
+.botao:hover { filter: brightness(1.08); }
+.botao--secundario { background: transparent; color: var(--branco); border: 2px solid rgb(255 255 255 / 0.5); font-weight: 600; }
+
+/* Mensagens de estado */
+.mensagem { padding: var(--espaco-2); border-radius: var(--raio); background: var(--branco); box-shadow: var(--sombra); }
+.mensagem--erro { background: var(--erro-fundo); color: var(--erro-texto); }
