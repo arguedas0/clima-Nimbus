@@ -156,3 +156,38 @@ main { padding-block: var(--espaco-3) var(--espaco-4); display: grid; gap: var(-
 .chuva-item__barra { height: 0.75rem; border-radius: 999px; background: var(--azul-claro); overflow: hidden; }
 .chuva-item__barra::before { content: ""; display: block; height: 100%; width: var(--mm, 0%); background: var(--azul-ceu); border-radius: inherit; transition: width 0.5s ease; }
 .chuva-item__valor { text-align: right; font-weight: 800; color: var(--azul-profundo); }
+
+
+/* Perguntas frequentes */
+.faq { background: var(--branco); border-radius: var(--raio); box-shadow: var(--sombra); padding: var(--espaco-2); margin-bottom: var(--espaco-1); }
+.faq summary { cursor: pointer; font-weight: 800; color: var(--azul-profundo); }
+.faq p { margin-top: var(--espaco-1); color: var(--texto-suave); max-width: 65ch; }
+
+/* Rodapé */
+.rodape { background: var(--azul-profundo); color: var(--branco); padding-block: var(--espaco-3); font-size: 0.9rem; }
+.rodape a { color: var(--amarelo-sol); }
+
+/* ---------- 6. TEMAS POR CLIMA (o JS só troca data-clima) ---------- */
+[data-clima="ceu-limpo"] { --agora-de: #1d4f91; --agora-ate: #2f78b8; }
+[data-clima="nublado"]   { --agora-de: #3f5266; --agora-ate: #5b7083; }
+[data-clima="chuva"]     { --agora-de: #24405f; --agora-ate: #3d5f82; }
+[data-clima="noite"]     { --agora-de: #0f1f3d; --agora-ate: #26386b; }
+
+/* ---------- 7. UTILITÁRIOS ---------- */
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- 8. RESPONSIVO E PREFERÊNCIAS ---------- */
+@media (min-width: 48rem) {
+  .agora { grid-template-columns: 1.2fr 1fr; align-items: end; }
+}
+
+@media (max-width: 30rem) {
+  .chuva-item { grid-template-columns: 5.5rem 1fr 3.5rem; gap: var(--espaco-1); }
+  .botao--secundario { flex: 1 1 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
